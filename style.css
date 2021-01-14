@@ -1,0 +1,51 @@
+
+
+.heading {
+    font-size: 3rem;
+    text-align: center;
+}
+.container-grid {
+    height: 25rem;
+    width: 25rem;
+    margin: auto;
+    background-color: red;
+    display: grid;
+    grid-template-columns: repeat(9, auto);
+    padding: 0.5rem;;
+}
+
+
+.container-panel {
+    width: 25rem;
+    height: 2rem;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    background-color: blue;
+    padding: 0.5rem;
+    text-align: center;
+    grid-gap: 0.5rem;
+}
+
+.points {
+    font-size: 1.5rem;
+    background-color: rgb(8, 223, 80);
+}
+
+.grid-items {
+    background-color: grey;
+    border: 1px solid black;
+    color: grey;
+}
+
+button:hover {
+    background-color: rgb(8, 223, 80);
+}
+.pressed {
+    background-image: url(https://img.icons8.com/emoji/48/000000/bomb-emoji.png);
+}
+.pressed1{
+    background-color: lightblue;
+    color: black;
+    text-align: center;
+}
