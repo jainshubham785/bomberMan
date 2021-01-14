@@ -1,25 +1,25 @@
-for(var i = 1; i <= 81; i++) {
-    var node = document.createElement("div");
+for (var i = 1; i <= 81; i++) {
+    var node = document.createElement("button");
     node.setAttribute("class", "grid-items");
-    node.setAttribute("id" , "cell_{" + i + "}");
-    node.textContent = i;   
+    node.setAttribute("id", "cell_{" + i + "}");
+    node.setAttribute("disabled", true);
+    node.textContent = i;
     document.querySelector(".container-grid").appendChild(node);
 }
 
-for(var i = 0; i < 81; i++) {
+for (var i = 0; i < 81; i++) {
     var node = document.querySelectorAll(".grid-items")[i];
-    node.addEventListener("click", function() {
-        
-        if(bombs.indexOf(Number(this.textContent)) == -1) {
+    node.addEventListener("click", function () {
 
+        if (bombs.indexOf(Number(this.textContent)) == -1) {
             var points = Math.floor(Math.random() * 3);
             this.textContent = points;
             document.getElementById(this.id).classList.add("pressed1");
             var x = document.getElementById("score");
-            x.textContent = Number(x.textContent) + points; 
-        }
-        else {
-            for(var i = 0; i < bombs.length; i++) {
+            x.textContent = Number(x.textContent) + points;
+            this.disabled = true;
+        } else {
+            for (var i = 0; i < bombs.length; i++) {
                 document.getElementById("cell_{" + bombs[i] + "}").classList.add("pressed");
             }
             setTimeout(() => {
@@ -27,7 +27,7 @@ for(var i = 0; i < 81; i++) {
                 location.reload();
             }, 100);
         }
-    });  
+    });
 }
 
 function reset() {
@@ -36,14 +36,15 @@ function reset() {
 }
 
 var bombs = [];
+
 function bombsLocation() {
     bombs.length = 0;
-    while(bombs.length < 10) {
+    while (bombs.length < 10) {
         var a = Math.ceil(Math.random() * 81);
-        if(bombs.indexOf(a) === -1) 
+        if (bombs.indexOf(a) === -1)
             bombs.push(a);
-    }  
+    }
+    for (var i = 0; i < 81; i++) {
+        document.querySelectorAll(".grid-items")[i].disabled = false;
+    }
 }
-
-
-

@@ -1,14 +1,21 @@
-
-
+body {
+    background-color: black;
+}
 .heading {
+    color: #190061;
     font-size: 3rem;
     text-align: center;
+}
+.instruction {
+    color: #240090;
+    text-align: center;
+    font-size: 1rem;
 }
 .container-grid {
     height: 25rem;
     width: 25rem;
     margin: auto;
-    background-color: red;
+    background-color :#3500D3;
     display: grid;
     grid-template-columns: repeat(9, auto);
     padding: 0.5rem;;
@@ -21,7 +28,7 @@
     margin: auto;
     display: grid;
     grid-template-columns: repeat(3, auto);
-    background-color: blue;
+    background-color: #282828;
     padding: 0.5rem;
     text-align: center;
     grid-gap: 0.5rem;
@@ -29,17 +36,17 @@
 
 .points {
     font-size: 1.5rem;
-    background-color: rgb(8, 223, 80);
+    background-color: #5225da;
 }
 
-.grid-items {
+.grid-items {   
     background-color: grey;
     border: 1px solid black;
     color: grey;
 }
 
 button:hover {
-    background-color: rgb(8, 223, 80);
+    background-color: #66FCf1;
 }
 .pressed {
     background-image: url(https://img.icons8.com/emoji/48/000000/bomb-emoji.png);
