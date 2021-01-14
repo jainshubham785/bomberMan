@@ -45,9 +45,10 @@ body {
     color: grey;
 }
 
-button:hover {
-    background-color: #66FCf1;
-}
+/* button.grid-items:hover {
+    text-indent: -9000px;
+    text-transform: capitalize; 
+} */
 .pressed {
     background-image: url(https://img.icons8.com/emoji/48/000000/bomb-emoji.png);
 }
