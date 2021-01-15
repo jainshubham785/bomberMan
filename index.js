@@ -3,7 +3,7 @@ for (var i = 1; i <= 81; i++) {
     node.setAttribute("class", "grid-items");
     node.setAttribute("id", "cell_{" + i + "}");
     node.setAttribute("disabled", true);
-    node.textContent = i;
+    node.setAttribute("value", i);
     document.querySelector(".container-grid").appendChild(node);
 }
 
@@ -11,8 +11,8 @@ for (var i = 0; i < 81; i++) {
     var node = document.querySelectorAll(".grid-items")[i];
     node.addEventListener("click", function () {
 
-        if (bombs.indexOf(Number(this.textContent)) == -1) {
-            var points = Math.floor(Math.random() * 3);
+        if (bombs.indexOf(Number(this.value)) == -1) {
+            var points = Math.ceil(Math.random() * 3);
             this.textContent = points;
             document.getElementById(this.id).classList.add("pressed1");
             var x = document.getElementById("score");

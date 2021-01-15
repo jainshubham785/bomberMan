@@ -17,7 +17,8 @@ body {
     margin: auto;
     background-color :#3500D3;
     display: grid;
-    grid-template-columns: repeat(9, auto);
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(9, 1fr);
     padding: 0.5rem;;
 }
 
@@ -37,6 +38,10 @@ body {
 .points {
     font-size: 1.5rem;
     background-color: #5225da;
+}
+
+button:hover{
+    background-color: lightblue;
 }
 
 .grid-items {   
