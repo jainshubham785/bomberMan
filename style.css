@@ -2,12 +2,12 @@ body {
     background-color: black;
 }
 .heading {
-    color: #190061;
+    color: #ff2609;
     font-size: 3rem;
     text-align: center;
 }
 .instruction {
-    color: #240090;
+    color: #720c6d;
     text-align: center;
     font-size: 1rem;
 }
@@ -28,7 +28,7 @@ body {
     height: 2rem;
     margin: auto;
     display: grid;
-    grid-template-columns: repeat(3, auto);
+    grid-template-columns: 1fr 2fr 1fr;
     background-color: #282828;
     padding: 0.5rem;
     text-align: center;
